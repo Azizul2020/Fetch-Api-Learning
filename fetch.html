@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+
+<body>
+    <script>
+        //    fetch('a.json')
+        //        .then((a) => {
+        //            return a.json();
+        //        })
+        //        .then((c) => {
+        //            var arrays = c;
+        //            console.log(arrays[0].name)
+        //        })
+        data();
+        async function data() {
+
+            var arrays = await fetch('a.json');
+            var data = await arrays.json();
+            console.log(data[0].class)
+        }
+        var a = {
+            'name': 'akdjfkadfja',
+            'roll': 9
+
+        }
+        fetch('a.php', {
+            method: 'POST',
+            body: a
+        }).then(function(c) {
+            return c.json();
+        }).then(function(a) {
+            console.log(a)
+        })
+    </script>
+</body>
+
+</html>
+
+</html>
